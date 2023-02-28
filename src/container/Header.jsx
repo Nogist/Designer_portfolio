@@ -10,7 +10,7 @@ export default function Header () {
         <h1 className='text-right pr-[150px]'>DESIGN</h1>
       </div>
       <div className='w-[117px] h-[118px] absolute bottom-16 ml-[150px]'> 
-        <div className='h-full top-[-20px]  rounded-full border-solid border-2 border-black '>
+        <div className='h-full top-[-20px]  rounded-full border-solid border-2 border-[#1A1A1A] '>
           <div className=' w-[117px] h-[118px] flex justify-center  items-center'>
             <Image 
               src={mouse}

@@ -7,6 +7,7 @@ import styles from '@/styles/Home.module.css';
 import mouse from '../assets/mouse.png';
 import Background from '@/container/Background';
 import Context from '@/container/Context';
+import { useInView } from 'react-intersection-observer';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Header from "@/container/Header";
@@ -29,7 +30,7 @@ export default function Home() {
     rootMargin: "250px 0px 0px -280px",
   });
   const { ref: ref2, inView: visible2 } = useInView({
-    threshold: 0.4,
+    threshold: 0.44,
     rootMargin: '200px 0px 0px 0px',
   });
   const { ref: ref3, inView: visible3 } = useInView({
@@ -62,7 +63,7 @@ export default function Home() {
       <div className='h-screen '>
 
       </div>
-      <div ref={ref4} className={`h-[120vh] flex flex-col justify-center ${visible4 ? 'white':'black'}`}>
+      <div ref={ref4} className={`h-[150vh] flex flex-col justify-center ${visible4 ? 'white':'black'}`}>
         <Projects />
       </div>
       <ProjectDetails />

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ProjectDetails () {
   return (
-    <div className='h-full py-[150px]'>
+    <>
       <div className='w-full flex justify-between px-[150px]'>
         <div className='w-[556px]'>
         <Context
@@ -36,6 +36,6 @@ export default function ProjectDetails () {
           fourth='baas' fifth= 'the awakened woman' 
         />
       </div>
-    </div>
+    </>
   )
 }

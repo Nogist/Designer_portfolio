@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import mouse from '@/assets/mouse.png';
 import ContextProjects from '@/container/ContextProjects';
 import { useInView } from 'react-intersection-observer';
@@ -14,21 +15,18 @@ export default function AllProjects () {
 
   const me = 'I am a computer programmer and a junior majoring in computer science and a self-taught developer. I am knowledgeable in Figma, Javascript, Python , Solidity and experimental knowledge of Rust. ';
   
-  const { ref: ref1, inView: visible1 } = useInView({
-    threshold: 0.85,
-    rootMargin: "250px 0px 0px -280px",
-  });
+
   const { ref: ref2, inView: visible2 } = useInView({
     threshold: 0.4,
-    rootMargin: '200px 0px 0px 0px',
+    rootMargin: '0px 0px 0px 0px',
   });
   const { ref: ref3, inView: visible3 } = useInView({
     threshold: 0.5,
     rootMargin: "300px 0px 0px -200px",
   });
   const { ref: ref4, inView: visible4 } = useInView({
-    threshold: 0.1,
-    rootMargin: "-250px 0px 0px 0px",
+    threshold: 0.4,
+    rootMargin: "0px 0px 0px 0px",
   });
   const { ref: ref5, inView: visible5 } = useInView({
     threshold: '0.5',
@@ -60,7 +58,7 @@ export default function AllProjects () {
           </div>
         </div>
       </div>
-      <div ref={ref2} className='h-screen text-white flex flex-col justify-center'>
+      <div ref={ref2} className='h-[150vh] text-white flex flex-col justify-center'>
         <h1 className='pl-[150px]'>ux</h1>
         <h1 className='text-center'>Design</h1>
       </div>
@@ -92,7 +90,7 @@ export default function AllProjects () {
           text3 = {me}
         /> 
       </div>
-      <div ref={ref4} className='h-screen text-white flex flex-col justify-center'>
+      <div ref={ref4} className='h-[150vh] text-white flex flex-col justify-center'>
         <h1 className='pl-[150px]'>ui</h1>
         <h1 className='text-center'>Design</h1>
       </div>
