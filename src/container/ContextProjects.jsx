@@ -1,8 +1,12 @@
-
+import { useState } from "react";
 import Image from "next/image";
 import styles from '@/styles/Home.module.css'
 
+
 export default function ContextProjects ({picture, picture1, head, head2, topic, topic2, topic3, text, text2, text3, headEnd }) {
+  
+  const [page, sePage] = useState(false);
+  
   return (
     <>
       <div  className=" w-[full] flex justify-center items-center mb-[100px] context__projects">

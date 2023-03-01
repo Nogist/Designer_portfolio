@@ -17,8 +17,8 @@ export default function UiDesigner () {
   return (
     <div  ref={ref1}>
       {!visible1 ? 
-        (<h1  className='pl-[150px] mb-[48px] '>Ui</h1>) : 
-        (<h1  className={`pl-[150px] mb-[48px] tracking-in-expand`}>Ux</h1>)
+        (<h1  className=' pl-[10.42%] mb-[48px] '>Ui</h1>) : 
+        (<h1  className={`pl-[10.42%] mb-[48px] tracking-in-expand`}>Ux</h1>)
       }
       <h1 className='text-center'>Designer</h1>
     </div>

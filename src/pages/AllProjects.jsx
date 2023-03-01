@@ -59,7 +59,7 @@ export default function AllProjects () {
         </div>
       </div>
       <div ref={ref2} className='h-[150vh] text-white flex flex-col justify-center'>
-        <h1 className='pl-[150px]'>ux</h1>
+        <h1 className='pl-[10.42%]'>ux</h1>
         <h1 className='text-center'>Design</h1>
       </div>
       <div ref={ref3} className="flex flex-col py-[150px]  items-center justify-center ">
@@ -91,7 +91,7 @@ export default function AllProjects () {
         /> 
       </div>
       <div ref={ref4} className='h-[150vh] text-white flex flex-col justify-center'>
-        <h1 className='pl-[150px]'>ui</h1>
+        <h1 className='pl-[10.42%]'>ui</h1>
         <h1 className='text-center'>Design</h1>
       </div>
       <div className="flex flex-col py-[150px]  items-center justify-center ">
