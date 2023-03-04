@@ -4,8 +4,8 @@ import Logo from '@/assets/Vector.png';
 
 export default function Navbar() {
   return (
-    <nav className={`absolute  top-0 left- 0 w-full `}>
-      <div className={`flex justify-between px-[150px] pt-4 .big-text`}>
+    <nav className={`absolute  top-0 left- 0 w-full blo`}>
+      <div className={`flex justify-between px-[10.42%] items-center py-4 .big-text`}>
         <div className="nav-logo">
           <Image 
             src={Logo} 
@@ -15,7 +15,7 @@ export default function Navbar() {
             height= 'auto'
           />
         </div>
-        <p className={`text-3xl font-bold leading-10 big-text`}>Docs</p>
+        <h1 className={`text-[30px] font-[700] text-black leading-10 big-text`}>Docs</h1>
       </div>
     </nav>
   )

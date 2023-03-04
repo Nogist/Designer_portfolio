@@ -10,12 +10,62 @@ import image3 from '@/assets/mock3.jpg';
 import image4 from '@/assets/mock4.jpg';
 import image5 from '@/assets/mock5.jpg';
 import image6 from '@//assets/mock6.jpg';
+import PictureModal from './PictureModal';
+import TutorBoost from './TutorBoost';
+import Tutor from '@/assets/TutorBoost.png'
+import Navbar from '@/components/Navbar';
 
 export default function AllProjects () {
 
   const me = 'I am a computer programmer and a junior majoring in computer science and a self-taught developer. I am knowledgeable in Figma, Javascript, Python , Solidity and experimental knowledge of Rust. ';
   
+  // const [page, setPage] = useState(false);
+  // const [pages, setPages] = useState(false);
 
+
+  // const handleHeadClick = () => {
+  //   setPage(prevPage => !prevPage);
+  //   document.body.style.overflow = 'hidden';
+  // }
+
+  // const handleHeadClicks = () => {
+  //   setPages(prevPages => !prevPages);
+  //   document.body.style.overflow = 'hidden';
+  // }
+
+  // const closeModal = () => {
+  //   setPage(false);
+  //   setPages(false);
+  //   document.body.style.overflow = 'auto';
+  // }
+  
+  // const handleClose = () => {
+  //   setPage(false);
+  //   setPages(false);
+  //   document.body.style.overflow = 'auto';
+  // };
+  
+  const [modal, setModal] = useState({
+    isOpen: false,
+    image: null,
+  });
+  
+  const handleHeadClick = (image) => {
+    setModal({
+      isOpen: true,
+      image: image,
+    });
+    document.body.style.overflow = 'hidden';
+  }
+  
+  const closeModal = () => {
+    setModal({
+      isOpen: false,
+      image: null,
+    });
+    document.body.style.overflow = 'auto';
+  }
+  
   const { ref: ref2, inView: visible2 } = useInView({
     threshold: 0.4,
     rootMargin: '0px 0px 0px 0px',
@@ -32,13 +82,11 @@ export default function AllProjects () {
     threshold: '0.5',
     rootMargin: "",
   });
-  const { ref: ref6, inView: visible6 } = useInView({
-    threshold: '',
-    rootMargin: "",
-  }); 
+
   
   return (
-    <>
+    <div>
+      <Navbar />
       <div className={`${!visible2 ? 'section0':'section3'} ${!visible3 ? '':'section0'} ${visible4 ? 'section1 section': 'section0'} ${!visible5 ? 'section0':'section2'}`}></div>
       <div className="h-screen flex flex-col items-center justify-center">
         <p className="text-black w-7/12 ">
@@ -58,7 +106,7 @@ export default function AllProjects () {
           </div>
         </div>
       </div>
-      <div ref={ref2} className='h-[150vh] text-white flex flex-col justify-center'>
+      <div ref={ref2} className='h-[100vh] text-white flex flex-col justify-center'>
         <h1 className='pl-[10.42%]'>ux</h1>
         <h1 className='text-center'>Design</h1>
       </div>
@@ -66,16 +114,24 @@ export default function AllProjects () {
         <ContextProjects
           picture={image1}
           picture1={image2}
-          head= 'chowai'
+          head= 'chowai' 
           head2='tutorboost'
           topic='problem'
           topic2= 'solution'
           topic3= 'impact'
-          headEnd= 'view project'
           text = {me}
           text2 = {me}
           text3 = {me}
+          onHeadClick={() => handleHeadClick(image1)}
+          onHeadClicks={() => handleHeadClick(image2)}
+          linkaddress= '/*'
+          linkaddress1 ='/TutorBoost'
         />
+       {modal.isOpen && (
+          <div className='fixed top-0 left-0 w-full h-full'>
+            <PictureModal handleClick={closeModal} closeModal={closeModal} image={modal.image}/>
+          </div>
+        )}
         <ContextProjects 
           picture={image3}
           picture1={image4}
@@ -84,13 +140,16 @@ export default function AllProjects () {
           topic='problem'
           topic2= 'solution'
           topic3= 'impact'
-          headEnd= 'view project'
           text = {me}
           text2 = {me}
           text3 = {me}
+          onHeadClick={() => handleHeadClick(image3)}
+          onHeadClicks={() => handleHeadClick(image4)}
+          linkaddress= '/Medicci'
+          linkaddress1 ='/NftLoan'
         /> 
       </div>
-      <div ref={ref4} className='h-[150vh] text-white flex flex-col justify-center'>
+      <div ref={ref4} className='h-[100vh] text-white flex flex-col justify-center'>
         <h1 className='pl-[10.42%]'>ui</h1>
         <h1 className='text-center'>Design</h1>
       </div>
@@ -100,21 +159,28 @@ export default function AllProjects () {
           picture1={image5}
           head= 'ntfloan'
           head2= 'muse'
-          headEnd= 'view project'
           text3 = {me}
+          onHeadClick={() => handleHeadClick(image5)}
+          onHeadClicks={() => handleHeadClick(image5)}
+          linkaddress= '/NftLoan'
+          linkaddress1 ='/*'
         />
         <ContextProjects 
           picture={image6}
           picture1={image5}
           head= 'baas'
           head2= 'the awakened woman'
-          headEnd= 'view project'
           text3 = {me}
+          onHeadClick={() => handleHeadClick(image6)}
+          onHeadClicks={() => handleHeadClick(image5)}
+          linkaddress= '/Baas'
+          linkaddress1='/AwakenedWoman'
         />
-      </div>
+      </div> 
       <div ref={ref5} className='h-screen flex flex-col justify-center items-center'>
         <Talk />
       </div>
-    </>
+      
+    </div>
   )
 }

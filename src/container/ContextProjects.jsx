@@ -1,67 +1,75 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from '@/styles/Home.module.css'
+import pictureModal from "@/pages/PictureModal";
+import Link from "next/link";
+import TutorBoost from "@/pages/TutorBoost";
 
 
-export default function ContextProjects ({picture, picture1, head, head2, topic, topic2, topic3, text, text2, text3, headEnd }) {
-  
-  const [page, sePage] = useState(false);
-  
+export default function ContextProjects (props)
+  {
   return (
     <>
-      <div  className=" w-[full] flex justify-center items-center mb-[100px] context__projects">
-        <div className="mr-[30px] w-[555px] flex flex-col  ">
+      <div  className=" w-[90%] flex justify-center items-center mb-[100px] context__projects">
+        <div className=" w-[555px] flex flex-col  ">
           <p className="w-[full] height-[416.25px]">
             <Image 
-              src={picture}
+              src={props.picture}
               width='auto'
               height= 'auto'
+              alt='Ui design'
               style = {{ objectFit: 'cover' }}
             />
           </p>
-          <button className="button__overlay">{head}</button>
-          <button className="mb-[32px] text-black"> {head} </button>
+          <button className="button__overlay">{props.head}</button>
+          <button onClick={props.onHeadClick} className="mb-[32px] text-black"> {props.head} </button>
+          
           <div className="flex flex-col designs__content">
             <span className={`designs__content__main`}>
-            {topic && <p>{topic}</p>}
-            {text && <h6>{text}</h6>}
+              {props.topic && <p>{props.topic}</p>}
+              {props.text && <h6>{props.text}</h6>}
             </span>
             <span className={`designs__content__main`} >
-              {topic && <p>{topic2}</p>}
-              {text2 && <h6>{text2}</h6>}
+              {props.topic && <p>{props.topic2}</p>}
+              {props.text2 && <h6>{props.text2}</h6>}
             </span>
             <span className={`designs__content__main`}>
-              {topic3 && <p>{topic3}</p>}
-              {text3 && <h6>{text3}</h6>}
+              {props.topic3 && <p>{props.topic3}</p>}
+              {props.text3 && <h6>{props.text3}</h6>}
             </span>
-            <button className="mt-[16px]">{headEnd}</button>
+            {props.linkaddress && <Link href={props.linkaddress}>
+              <button className="mt-[16px]">view project</button>
+            </Link>}
           </div>
         </div>
         <div className="mr-[30px] w-[555px] flex flex-col ">
           <p className="w-[full] height-[416.25px]">
             <Image 
-              src={picture1}
+              src={props.picture1}
               width='auto'
               height= 'auto'
+              alt='Ux design'
               style = {{ objectFit: 'cover' }}
             />
           </p>
-          <button className="button__overlay">{head}</button>
-          <button className="mb-[32px] text-black"> {head2} </button>
+          <button className="button__overlay">{props.head}</button>
+          <button onClick={props.onHeadClicks} className="mb-[32px] text-black"> {props.head2} </button>
           <div className="flex flex-col designs__content">
-            <span className={`designs__content__main`}>
-              {topic && <p>{topic}</p>}
-              {text && <h6>{text}</h6>}
+          <span className={`designs__content__main`}>
+              {props.topic && <p>{props.topic}</p>}
+              {props.text && <h6>{props.text}</h6>}
+            </span>
+            <span className={`designs__content__main`} >
+              {props.topic && <p>{props.topic2}</p>}
+              {props.text2 && <h6>{props.text2}</h6>}
             </span>
             <span className={`designs__content__main`}>
-              {topic2 && <p>{topic2}</p>}
-              {text2 && <h6>{text2}</h6>}
+              {props.topic3 && <p>{props.topic3}</p>}
+              {props.text3 && <h6>{props.text3}</h6>}
             </span>
-            <span className={`designs__content__main`}>
-              {text3 && <p>{topic3}</p>}
-              {text3 && <h6>{text3}</h6>}
-            </span>
-            <button className="mt-[16px]">{headEnd}</button>
+            {props.linkaddress1 && <Link href={props.linkaddress1}>
+              <button className="mt-[16px]">view project</button>
+            </Link>}
           </div>
         </div>
       </div>

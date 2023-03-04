@@ -5,13 +5,9 @@ import 'aos/dist/aos.css';
 
 export default function UiDesigner () {
 
-  useEffect (() => {
-    AOS.init({duration: 1000});
-  },[])
-
   const { ref: ref1, inView: visible1 } = useInView({
-    threshold: 0.85,
-    rootMargin: "250px 0px 0px -280px",
+    threshold: 0.8,
+    rootMargin: "100px 0px 0px -280px",
   });
 
   return (

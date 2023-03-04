@@ -76,8 +76,9 @@
   height: 100vh;
   z-index: -1;
 }
+
 .section1{
-  animation: fade-in 2s ease-in-out forwards;
+  animation: fade-in 1.5s ease-in-out forwards;
   opacity: 100;
 }
 .section2 {
@@ -120,7 +121,8 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1; animation: fade-in 1s ease-in-out forwards;
+  z-index: -1; 
+  animation: fade-in 1s ease-in-out forwards;
   opacity: 100;
 }
 
@@ -234,6 +236,13 @@ p {
   line-height: 1.5rem;
   color: #FFFFFF;
 }
+.blo {
+  background-color: #66000000;
+  overflow: visible;
+  z-index: 99998;
+  backdrop-filter: blur(60px);
+  position: fixed;
+}
 .section__list {
   display: flex;
   align-items: center;
@@ -250,7 +259,7 @@ p {
 .section__list > P {
   margin: 24px 0;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 15px;
   line-height: 38px;
   letter-spacing: 1.92px;
   text-transform: uppercase;
@@ -269,7 +278,7 @@ button {
   color: #1A1A1A;
   text-transform: uppercase;
   padding: 11px;
-  width: 325px;
+  width: 307px;
   background-color:  #8CB9B4;
 }
 .button__overlay {
@@ -312,7 +321,7 @@ button {
   margin: 16px 0;
   font-family: var(--font-text);
 }
-.designs__content > button {
+.designs__content > a > button {
   width: 135px;
   font-family: var(--font-text);
   font-weight: 400;
@@ -325,7 +334,10 @@ button {
   text-transform: capitalize;
 }
 
-
+.talk {
+  display: flex;
+  gap: 64px;
+}
 
 @media only screen and (max-width: 850px) {
   .context__projects {
@@ -344,4 +356,41 @@ button {
     align-items: flex-start;
     margin-right: 0px;
   }
+  h1 {
+    font-size: 5rem;
+  }
+  .talk > h1 {
+    margin: 0 ;
+    font-size: 4rem;
+  }
+  .talk {
+    display: flex;
+    gap: 1.6rem;
+    margin: 0;
+  }
+  button {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .context {
+    width: 100%;
+  }
+  .project__details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .project__view {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .project__detain {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 64px;
+  }
+
 }

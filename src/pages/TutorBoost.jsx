@@ -1,19 +1,16 @@
-import Image from "next/image";
-import image2 from '@/assets/mock2.jpg';
-
+import Image from "next/image"
+import Tutor from '@/assets/TutorBoost.png'
 
 export default function TutorBoost () {
   return (
-    <div className="w-full absolute top-0 left-0 bg-[blue]">
-      <div className="w-full flex justify-center items-center px-[150px] py-[150px]">
+    <div className="w-full h-full flex items-center border-[0px] justify-center">
         <Image 
-          src={image2}
+          src={Tutor}
           width= 'auto'
           height= 'auto'
           alt= 'projectImage'
-          style={{ objectFit: 'cover'}}
+          layout="responsive"
         />
       </div>
-    </div>
   )
 }

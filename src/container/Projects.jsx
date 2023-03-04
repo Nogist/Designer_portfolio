@@ -10,7 +10,7 @@ export  default function Projects () {
 
   return (
     <div>
-      <h1 className='pl-[150px] mb-[48px]'>selected</h1>
+      <h1 className='pl-[10.42%] mb-[48px]'>selected</h1>
       <h1 className='text-center'>projects</h1>
     </div>
   )
