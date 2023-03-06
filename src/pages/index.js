@@ -51,7 +51,7 @@ export default function Home() {
   });
   
   return (
-    <div>
+    <div className="w-full h-full">
       <div className={`${!visible2 ? 'section0':'section section1'} ${!visible3 ? 'section1':'section2'} ${visible4 ? 'section3': 'section0'} ${!visible5 ? 'section0':'section2'}`}></div>
       <Navbar />
       <Header />
