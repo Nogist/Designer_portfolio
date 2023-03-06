@@ -278,7 +278,7 @@ button {
   color: #1A1A1A;
   text-transform: uppercase;
   padding: 11px;
-  width: 307px;
+  width: 320px;
   background-color:  #8CB9B4;
 }
 .button__overlay {
@@ -352,6 +352,23 @@ button {
   display: flex;
   gap: 64px;
 }
+.project__view__all {
+  border: 1px solid #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 40px 46px;
+  gap: 12px;
+} 
+ .project__view__all > h1 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1A1A;
+}
+
 
 @media only screen and (max-width: 850px) {
   .context__projects {

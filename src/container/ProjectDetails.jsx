@@ -7,7 +7,7 @@ export default function ProjectDetails () {
   return (
     <>
       <div className='w-full flex justify-between px-[10.42%] project__details'>
-        <div className='project__details__context'>
+        <div className='w-[556px] project__details__context'>
           <Context
             text='ux design' first= 'chowai' 
             second= 'tutorboost' third='medicci'
