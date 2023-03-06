@@ -12,7 +12,7 @@ export default function Talk () {
 
   return (
     <>
-      <div className='text-[#8CB9B4] flex justify-center talk'>
+      <div className=' w-full text-[#8CB9B4] flex justify-center items-center talk'>
         <h1 data-aos="fade-right" >let's</h1>
         <h1 data-aos="fade-left">Talk</h1>
       </div>

@@ -7,7 +7,7 @@ export default function UiDesigner () {
 
   const { ref: ref1, inView: visible1 } = useInView({
     threshold: 0.8,
-    rootMargin: "100px 0px 0px -280px",
+    rootMargin: "100px 0px 0px -70px",
   });
 
   return (

@@ -10,7 +10,7 @@ export default function Context (props) {
   },[])
   
   return (
-    <div className='context '>
+    <div className='context bg-[yellow'>
       <h3 data-aos="fade-right" className='mb-[24px]' > {props.text}</h3>
       <Link href={props.linkfirst}  >
         <span  data-aos="fade-right" className='section__content section__list'>

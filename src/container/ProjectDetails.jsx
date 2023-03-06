@@ -7,7 +7,7 @@ export default function ProjectDetails () {
   return (
     <>
       <div className='w-full flex justify-between px-[10.42%] project__details'>
-        <div>
+        <div className='project__details__context'>
           <Context
             text='ux design' first= 'chowai' 
             second= 'tutorboost' third='medicci'
@@ -19,12 +19,12 @@ export default function ProjectDetails () {
             linkfifth= '/*'
           />
         </div>
+        <div className=' project__view'> 
         
-        <div className='mr-[10.42%] mt-[75px] mb-[40px] project__view'> 
-          <Link data-aos="fade-left" className=' w-[117px] h-[118px] flex flex-col items-center justify-center rounded-full border-solid border-2 border-[#999999] '
-           href='/AllProjects'>
-            <p className='text-[#1A1A1A] text-center'> VIEW  </p>
-            <p  className='text-[#1A1A1A]'>ALL</p>
+          <Link data-aos="fade-right" className='project__view__all '
+            href='/AllProjects'>
+            <h1> VIEW  </h1>
+            <h1 >ALL</h1>
           </Link>
         </div>
       </div>

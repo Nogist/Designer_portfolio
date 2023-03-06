@@ -259,7 +259,7 @@ p {
 .section__list > P {
   margin: 24px 0;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 2.25rem;
   line-height: 38px;
   letter-spacing: 1.92px;
   text-transform: uppercase;
@@ -296,6 +296,20 @@ button {
 .nav-logo {
   width: 102.87 ;
   height: 69.41 ;
+}
+.details__resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #999999;
+  padding: 40px 13px;
+}
+.details__resume > h1 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 }
 .designs__content {
   display: flex;
@@ -357,15 +371,20 @@ button {
     margin-right: 0px;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
   }
   .talk > h1 {
     margin: 0 ;
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .talk {
     display: flex;
-    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     margin: 0;
   }
   button {
@@ -379,18 +398,47 @@ button {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
   }
   .project__view {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+  }
+  a {
+    padding :0;
+    margin: 0;
+  }
+  .project__view__all {
+    border: 1px solid #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 40px 46px;
+    gap: 12px;
+    margin-top: 64px;
+  }
+  .project__view__all > h1 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1A1A;
   }
   .project__detain {
     display: flex;
     flex-direction: column-reverse;
     gap: 64px;
+  }
+  .project__details__context {
+    width: 100% !important;
+  }
+
+  .section__list > P {
+    font-size: 1rem;
   }
 
 }
