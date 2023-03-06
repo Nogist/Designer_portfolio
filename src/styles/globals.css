@@ -243,6 +243,9 @@ p {
   backdrop-filter: blur(60px);
   position: fixed;
 }
+/* .header__content {
+  position: fixed;
+} */
 .section__list {
   display: flex;
   align-items: center;
@@ -388,7 +391,7 @@ button {
     margin-right: 0px;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   h3 {
     font-size: 3rem;
@@ -457,5 +460,10 @@ button {
   .section__list > P {
     font-size: 1rem;
   }
-
+  .header__scroll {
+    display: none;
+  }
+  nav h1 {
+    font-size: 1.5rem !important;
+  }
 }

@@ -95,7 +95,7 @@ export default function AllProjects () {
           more ideas in a minute than most people can in a day (No jokes).
         </p>
       </div>
-      <div className='w-[117px] h-[118px] absolute bottom-16 ml-[150px]'> 
+      <div className='header__scroll w-[117px] h-[118px] absolute bottom-16 ml-[10.42%]'> 
         <div className='h-full top-[-20px]  rounded-full border-solid border-2 border-black '>
           <div className=' w-[117px] h-[118px] flex justify-center  items-center'>
             <Image 

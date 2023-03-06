@@ -30,11 +30,11 @@ export default function Home() {
     rootMargin: "0px 0px 0px 0px",
   });
   const { ref: ref2, inView: visible2 } = useInView({
-    threshold: 0.44,
+    threshold: 0.42,
     rootMargin: '200px 0px 0px 0px',
   });
   const { ref: ref3, inView: visible3 } = useInView({
-    threshold: 0.5,
+    threshold: 0.37,
     rootMargin: "300px 0px 0px -200px",
   });
   const { ref: ref4, inView: visible4 } = useInView({
@@ -55,16 +55,16 @@ export default function Home() {
       <div className={`${!visible2 ? 'section0':'section section1'} ${!visible3 ? 'section1':'section2'} ${visible4 ? 'section3': 'section0'} ${!visible5 ? 'section0':'section2'}`}></div>
       <Navbar />
       <Header />
-       <div ref={ref2} className={`h-[150vh] text-black flex flex-col justify-center ${visible2 ? 'white':'black'} `}>
+       <div ref={ref2} className={`h-[100vh] text-black flex flex-col justify-center ${visible2 ? 'white':'black'} `}>
         <UiDesigner />
       </div>
-      <div ref={ref3} className='text-white text-center h-screen flex flex-col justify-center items-center '>
+      <div ref={ref3} className='relative text-white text-center h-screen flex flex-col justify-center items-center '>
         <Details />
       </div>
       <div className='h-screen '>
 
       </div>
-     <div ref={ref4} className={`h-[150vh] flex flex-col justify-center ${visible4 ? 'white':'black'}`}>
+     <div ref={ref4} className={`h-[100vh] flex flex-col justify-center ${visible4 ? 'white':'black'}`}>
         <Projects />
       </div>
        <div className='w-full'>

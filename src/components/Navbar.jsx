@@ -6,13 +6,13 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className={`absolute  top-0 left- 0 w-full blo`}>
+    <nav className={`fixed top-0 left- 0 w-full blo`}>
       <div className={`flex justify-between px-[10.42%] items-center py-4 .big-text`}>
         <Link className="nav-logo" href='/'>
           <Image 
             src={Logo} 
             alt="logo"
-            style={{ objectFit: "cover" }}
+            layout= 'resposive'
             width= 'auto'
             height= 'auto'
           />
